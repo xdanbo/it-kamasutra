@@ -3,36 +3,7 @@ const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET_USERS";
 
 const initialState = {
-  users: [
-    // {
-    //   id: 1,
-    //   fullName: "Artem",
-    //   followed: true,
-    //   status: "I am a boss",
-    //   location: { country: "Ukraine", city: "Kremenchuk" }
-    // },
-    // {
-    //   id: 2,
-    //   fullName: "Thomas",
-    //   followed: true,
-    //   status: "I am a teacher",
-    //   location: { country: "England", city: "Liverpool" }
-    // },
-    // {
-    //   id: 3,
-    //   fullName: "Roman",
-    //   followed: false,
-    //   status: "I am an admin",
-    //   location: { country: "Ukraine", city: "Lviv" }
-    // },
-    // {
-    //   id: 4,
-    //   fullName: "Herald",
-    //   followed: false,
-    //   status: "I am a witcher",
-    //   location: { country: "Poland", city: "Warsaw" }
-    // }
-  ]
+  users: []
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -41,7 +12,7 @@ const usersReducer = (state = initialState, action) => {
       return {
         ...state,
         users: state.users.map(u => {
-          if (u.id === action.userID) {
+          if (u.id === action.userId) {
             return { ...u, followed: true };
           }
           return u;
@@ -52,7 +23,7 @@ const usersReducer = (state = initialState, action) => {
       return {
         ...state,
         users: state.users.map(u => {
-          if (u.id === action.userID) {
+          if (u.id === action.userId) {
             return { ...u, followed: false };
           }
           return u;
@@ -69,14 +40,14 @@ const usersReducer = (state = initialState, action) => {
   }
 };
 
-export const followAC = userID => ({
+export const followAC = userId => ({
   type: FOLLOW,
-  userID
+  userId
 });
 
-export const unFollowAC = userID => ({
+export const unFollowAC = userId => ({
   type: UNFOLLOW,
-  userID
+  userId
 });
 
 export const setUsersAC = users => ({
