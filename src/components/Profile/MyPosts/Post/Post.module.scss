@@ -1,0 +1,14 @@
+.content {
+  grid-area: content;
+  background: cornflowerblue;
+}
+
+.content_img_w {
+  overflow: hidden;
+  position: relative;
+  height: 320px;
+}
+
+.content_img {
+  max-width: 100%;
+}

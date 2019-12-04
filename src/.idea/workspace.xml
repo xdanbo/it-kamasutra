@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="61bb128b-5022-48fa-9e02-1a3d16108190" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="src" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/App.js" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1UONt8LhmjHW1a6YNkHaXVEuqiI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/redux" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/redux" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61bb128b-5022-48fa-9e02-1a3d16108190" name="Default Changelist" comment="" />
+      <created>1575223893995</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575223893995</updated>
+      <workItem from="1575223895536" duration="4576000" />
+      <workItem from="1575278071025" duration="6673000" />
+      <workItem from="1575448822261" duration="7964000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1712" y="164" width="524" height="434" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1575452970992">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1712" y="164" width="524" height="434" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575452970992" />
+    <state x="2193" y="249" width="731" height="633" key="EditFileWatcherDialog" timestamp="1575453312727">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2193" y="249" width="731" height="633" key="EditFileWatcherDialog/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575453312727" />
+    <state x="1757" y="139" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575453288753">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1757" y="139" width="424" height="484" key="FileChooserDialogImpl/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575453288753" />
+    <state x="2033" y="107" width="1061" height="730" key="SettingsEditor" timestamp="1575459967829">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2033" y="107" width="1061" height="730" key="SettingsEditor/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575459967829" />
+    <state x="136" y="350" key="SettingsEditor/67.339.1299.741/1366.0.1920.1080@67.339.1299.741" timestamp="1575449307872" />
+  </component>
+</project>

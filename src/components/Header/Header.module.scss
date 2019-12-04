@@ -1,0 +1,14 @@
+.header {
+  grid-area: header;
+  background: cadetblue;
+}
+
+.logo-w {
+  overflow: hidden;
+  position: relative;
+  width: 60px;
+}
+
+.logo {
+  max-width: 100%;
+}

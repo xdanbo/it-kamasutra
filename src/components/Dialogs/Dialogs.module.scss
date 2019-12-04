@@ -1,0 +1,24 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+
+.dialogs-wrapper {
+  padding: 20px;
+}
+
+.dialogs-l-link {
+  cursor: pointer;
+  color: #fff;
+  &.active-mod {
+    color: darkmagenta;
+  }
+}
+
+.messages-wrapper {
+  padding: 20px;
+}
+
+.messages-l-block {
+  color: #fff;
+}

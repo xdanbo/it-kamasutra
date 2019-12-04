@@ -1,0 +1,23 @@
+.nav {
+  grid-area: nav;
+  background: burlywood;
+  padding: 20px;
+}
+
+.nav-list {
+}
+
+.nav-l-item {
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  &:visited {
+    color: #fff;
+  }
+  &.active-mod {
+    color: tomato;
+  }
+}
