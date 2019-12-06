@@ -1,31 +1,50 @@
 import React from "react";
 import classes from "./Users.module.scss";
-import * as axios from "axios";
-import userPhoto from "../../../src/assets/images/user.jpeg";
+import userPhoto from "../../assets/images/user.jpeg";
+import { NavLink } from "react-router-dom";
 
 const Users = props => {
-  const getUsers = () => {
-    if (props.users.length === 0) {
-      axios
-        .get("https://social-network.samuraijs.com/api/1.0/users")
-        .then(response => props.setUsers(response.data.items));
-    }
-  };
+  const pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+
+  const pages = [];
+  for (let i = 1; i <= pagesCount; i++) {
+    pages.push(i);
+  }
 
   return (
     <div>
-      <button onClick={getUsers}>Get Users</button>
+      <div>
+        {pages.map(p => {
+          return (
+            <span
+              className={
+                props.currentPage === p
+                  ? `${classes["page-item"]} ${classes["active-mod"]}`
+                  : `${classes["page-item"]}`
+              }
+              onClick={() => {
+                props.onPageChanged(p);
+              }}
+            >
+              {p}
+            </span>
+          );
+        })}
+      </div>
       {props.users.map(u => (
         <li key={u.id}>
           <div>
             <div>
-              <div className={classes["avatar-wrapper"]}>
+              <NavLink
+                to={`/profile/${u.id}`}
+                className={classes["avatar-wrapper"]}
+              >
                 <img
                   src={u.photos.small != null ? u.photos.small : userPhoto}
                   alt=""
                   className={classes["avatar-i"]}
                 />
-              </div>
+              </NavLink>
               <div>
                 {u.followed ? (
                   <button

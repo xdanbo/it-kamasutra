@@ -25,6 +25,15 @@ const Navbar = () => {
             Messages
           </NavLink>
         </li>
+        <li className={classes["nav-l-item"]}>
+          <NavLink
+            to="/users"
+            className={classes["nav-link"]}
+            activeClassName={classes["active-mod"]}
+          >
+            Users
+          </NavLink>
+        </li>
         {/* <li className={classes.nav_l_item}>
           <NavLink href="#3" className={classes.nav_link}>
             News

@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61bb128b-5022-48fa-9e02-1a3d16108190" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/user.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Users/Users.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../_gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Loader/Loader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Loader/Loader.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Profile/ProfileContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Users/Users.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Users/Users.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Users/UsersContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/redux-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/profile-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/users-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +29,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/components/Users/Users.jsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/App.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="JsFlowSettings">
@@ -48,14 +51,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/redux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/Profile" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/Profile" />
+      <recent name="$PROJECT_DIR$/components/Users" />
       <recent name="$PROJECT_DIR$/redux" />
     </key>
   </component>
@@ -84,6 +89,8 @@
       <workItem from="1575223895536" duration="4576000" />
       <workItem from="1575278071025" duration="6673000" />
       <workItem from="1575448822261" duration="21216000" />
+      <workItem from="1575533308754" duration="19301000" />
+      <workItem from="1575619573017" duration="21979000" />
     </task>
     <servers />
   </component>
@@ -94,10 +101,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1921" y="200" width="800" height="677" key="#Inspections" timestamp="1575535228804">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1921" y="200" width="800" height="677" key="#Inspections/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575535228804" />
     <state x="1712" y="164" width="524" height="434" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1575452970992">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1712" y="164" width="524" height="434" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575452970992" />
+    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575536942120">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575536942120" />
     <state x="2193" y="249" width="731" height="633" key="EditFileWatcherDialog" timestamp="1575453312727">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -106,10 +121,14 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1757" y="139" width="424" height="484" key="FileChooserDialogImpl/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575453288753" />
-    <state x="2033" y="107" width="1061" height="730" key="SettingsEditor" timestamp="1575459967829">
+    <state x="2033" y="107" width="1061" height="730" key="SettingsEditor" timestamp="1575537219926">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2033" y="107" width="1061" height="730" key="SettingsEditor/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575459967829" />
+    <state x="2033" y="107" width="1061" height="730" key="SettingsEditor/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575537219926" />
     <state x="136" y="350" key="SettingsEditor/67.339.1299.741/1366.0.1920.1080@67.339.1299.741" timestamp="1575449307872" />
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1575640480879">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1575640480879" />
   </component>
 </project>

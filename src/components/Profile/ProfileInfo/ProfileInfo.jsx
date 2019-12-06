@@ -1,7 +1,12 @@
 import React, { Fragment } from "react";
 import classes from "./ProfileInfo.module.scss";
+import Loader from "../../Loader/Loader.jsx";
 
-const ProfileInfo = () => {
+const ProfileInfo = props => {
+  if (!props.userProfile) {
+    return <Loader />;
+  }
+
   return (
     <Fragment>
       <div className={classes["content-img-w"]}>
@@ -11,7 +16,10 @@ const ProfileInfo = () => {
           className={classes["content-img"]}
         />
       </div>
-      <div className={classes["description-block"]}>ava + desc</div>
+      <div className={classes["description-block"]}>
+        <img src={props.userProfile.photos.large} alt="" />
+        ava + desc
+      </div>
     </Fragment>
   );
 };
