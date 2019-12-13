@@ -1,0 +1,8 @@
+.form-control {
+  &.error {
+    & input,
+    & textarea {
+      border-color: tomato;
+    }
+  }
+}
