@@ -1,75 +1,54 @@
 import React from "react";
 import classes from "./Users.module.scss";
 import userPhoto from "../../assets/images/user.jpeg";
-import { NavLink } from "react-router-dom";
-import Paginator from "../common/Paginator/Paginator.jsx";
+import {NavLink} from "react-router-dom";
 
-const Users = ({
-  currentPage,
-  onPageChanged,
-  totalUsersCount,
-  pageSize,
-  users,
-  followingInProgress,
-  unfollow,
-  follow,
-  ...props
-}) => {
+const User = ({ user, followingInProgress, follow, unfollow }) => {
   return (
-    <div>
-      <Paginator
-        currentPage={currentPage}
-        onPageChanged={onPageChanged}
-        totalUsersCount={totalUsersCount}
-        pageSize={pageSize}
-      />
-      {users.map(u => (
-        <li key={u.id}>
+    <li>
+      <div>
+        <div>
+          <NavLink
+            to={`/profile/${user.id}`}
+            className={classes["avatar-wrapper"]}
+          >
+            <img
+              src={user.photos.small != null ? user.photos.small : userPhoto}
+              alt=""
+              className={classes["avatar-i"]}
+            />
+          </NavLink>
           <div>
-            <div>
-              <NavLink
-                to={`/profile/${u.id}`}
-                className={classes["avatar-wrapper"]}
+            {user.followed ? (
+              <button
+                disabled={followingInProgress.some(id => id === user.id)}
+                onClick={() => unfollow(user.id)}
               >
-                <img
-                  src={u.photos.small != null ? u.photos.small : userPhoto}
-                  alt=""
-                  className={classes["avatar-i"]}
-                />
-              </NavLink>
-              <div>
-                {u.followed ? (
-                  <button
-                    disabled={followingInProgress.some(id => id === u.id)}
-                    onClick={() => unfollow(u.id)}
-                  >
-                    Unfollow
-                  </button>
-                ) : (
-                  <button
-                    disabled={followingInProgress.some(id => id === u.id)}
-                    onClick={() => follow(u.id)}
-                  >
-                    Follow
-                  </button>
-                )}
-              </div>
-            </div>
-            <div>
-              <div>
-                <div>{u.name}</div>
-                <div>{u.status}</div>
-              </div>
-              <div>
-                <div>{"u.location.country"}</div>
-                <div>{"u.location.city"}</div>
-              </div>
-            </div>
+                Unfollow
+              </button>
+            ) : (
+              <button
+                disabled={followingInProgress.some(id => id === user.id)}
+                onClick={() => follow(user.id)}
+              >
+                Follow
+              </button>
+            )}
           </div>
-        </li>
-      ))}
-    </div>
+        </div>
+        <div>
+          <div>
+            <div>{user.name}</div>
+            <div>{user.status}</div>
+          </div>
+          <div>
+            <div>{"u.location.country"}</div>
+            <div>{"u.location.city"}</div>
+          </div>
+        </div>
+      </div>
+    </li>
   );
 };
 
-export default Users;
+export default User;

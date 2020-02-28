@@ -1,34 +1,13 @@
-import React from "react";
-import classes from "../../Users/Users.module.scss";
-
-const Paginator = props => {
-  const pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-
-  const pages = [];
-  for (let i = 1; i <= pagesCount; i++) {
-    pages.push(i);
+.page-item {
+  padding: 0 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  &.active-mod {
+    text-decoration: underline;
+    color: #bada55;
   }
-
-  return (
-    <div>
-      {pages.map(p => {
-        return (
-          <span
-            className={
-              props.currentPage === p
-                ? `${classes["page-item"]} ${classes["active-mod"]}`
-                : `${classes["page-item"]}`
-            }
-            onClick={() => {
-              props.onPageChanged(p);
-            }}
-          >
-            {p}
-          </span>
-        );
-      })}
-    </div>
-  );
-};
-
-export default Paginator;
+  &:hover {
+    text-decoration: underline;
+  }
+}

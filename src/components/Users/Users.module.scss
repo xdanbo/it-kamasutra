@@ -15,17 +15,3 @@
   max-width: 100%;
   transition: 0.15s ease;
 }
-
-.page-item {
-  padding: 0 5px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 700;
-  &.active-mod {
-    text-decoration: underline;
-    color: #bada55;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-}

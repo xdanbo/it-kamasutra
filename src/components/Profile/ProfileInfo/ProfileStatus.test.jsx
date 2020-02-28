@@ -1,60 +1,53 @@
 import React from "react";
-import classes from "./ProfileInfo.module.scss";
+import { create } from "react-test-renderer";
+import ProfileStatus from "./ProfileStatus";
 
-class ProfileStatus extends React.Component {
-  state = {
-    editMode: false,
-    status: this.props.status
-  };
+describe("ProfileStatus component", () => {
+  test("Status from props should be in the State)", () => {
+    const component = create(<ProfileStatus status="it-kama" />);
+    const instance = component.getInstance();
+    expect(instance.state.status).toBe("it-kama");
+  });
 
-  activateEditMode = () => {
-    console.log("this:", this);
-    this.setState({ editMode: true });
-  };
+  test(`after creation <span> should be displayed`, () => {
+    const component = create(<ProfileStatus status="it-kama" />);
+    const root = component.root;
+    const span = root.findByType("span");
+    expect(span).not.toBeNull();
+  });
 
-  deactivateEditMode = () => {
-    this.setState({ editMode: false });
-    this.props.updateStatus(this.state.status);
-  };
+  test(`after creation <input> should not be displayed`, () => {
+    const component = create(<ProfileStatus status="it-kama" />);
+    const root = component.root;
 
-  onStatusChange = e => {
-    this.setState({
-      status: e.currentTarget.value
-    });
-  };
+    expect(() => {
+      const input = root.findByType("input");
+    }).toThrow();
+  });
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.status !== this.props.status) {
-      this.setState({
-        status: this.props.status
-      });
-    }
-  }
+  test(`after creation <span> should contain correct status`, () => {
+    const component = create(<ProfileStatus status="it-kama" />);
+    const root = component.root;
+    const span = root.findByType("span");
+    expect(span.children[0]).toBe("it-kama");
+  });
 
-  render() {
-    return (
-      <div className={classes["status-block"]}>
-        {!this.state.editMode && (
-          <div>
-            <span onDoubleClick={this.activateEditMode}>
-              {this.props.status || "Some dummy status"}
-            </span>
-          </div>
-        )}
-        {this.state.editMode && (
-          <div>
-            <input
-              autoFocus={true}
-              onBlur={this.deactivateEditMode}
-              type="text"
-              onChange={this.onStatusChange}
-              value={this.state.status}
-            />
-          </div>
-        )}
-      </div>
+  test(`input should be displayed in edit mode instead of span`, () => {
+    const component = create(<ProfileStatus status="it-kama" />);
+    const root = component.root;
+    const span = root.findByType("span");
+    span.props.onDoubleClick();
+    const input = root.findByType("input");
+    expect(input.props.value).toBe("it-kama");
+  });
+
+  test(`callback should be called`, () => {
+    const mockCallback = jest.fn();
+    const component = create(
+      <ProfileStatus status="it-kama" updateStatus={mockCallback} />
     );
-  }
-}
-
-export default ProfileStatus;
+    const instance = component.getInstance();
+    instance.deactivateEditMode();
+    expect(mockCallback.mock.calls.length).toBe(1);
+  });
+});

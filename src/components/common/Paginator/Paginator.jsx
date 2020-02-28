@@ -1,8 +1,13 @@
 import React from "react";
-import classes from "./Users.module.scss";
+import classes from "./Paginator.module.scss";
 
-const Paginator = props => {
-  const pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+const Paginator = ({
+  currentPage,
+  onPageChanged,
+  totalUsersCount,
+  pageSize
+}) => {
+  const pagesCount = Math.ceil(totalUsersCount / pageSize);
 
   const pages = [];
   for (let i = 1; i <= pagesCount; i++) {
@@ -15,12 +20,12 @@ const Paginator = props => {
         return (
           <span
             className={
-              props.currentPage === p
+              currentPage === p
                 ? `${classes["page-item"]} ${classes["active-mod"]}`
                 : `${classes["page-item"]}`
             }
             onClick={() => {
-              props.onPageChanged(p);
+              onPageChanged(p);
             }}
           >
             {p}

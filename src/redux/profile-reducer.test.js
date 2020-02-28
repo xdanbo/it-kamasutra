@@ -1,4 +1,7 @@
-import profileReducer, { addPostCreator } from "./profile-reducer.js";
+import profileReducer, {
+  addPostCreator,
+  deletePostCreator
+} from "./profile-reducer.js";
 import React from "react";
 
 let state = {
@@ -17,7 +20,7 @@ it("length of posts should be incremented", () => {
 });
 
 it("length of messages must be decremented after deleting", () => {
-  let action = deletePost(1);
+  let action = deletePostCreator(1);
 
   let newState = profileReducer(state, action);
 

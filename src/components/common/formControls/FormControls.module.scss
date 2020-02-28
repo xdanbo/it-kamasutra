@@ -2,7 +2,17 @@
   &.error {
     & input,
     & textarea {
-      border-color: tomato;
+      border: 2px solid tomato;
+    }
+    & span {
+      color: tomato;
+      font-weight: 700;
     }
   }
+}
+
+.form-summary-error {
+  border: 2px solid tomato;
+  padding: 5px;
+  color: tomato;
 }

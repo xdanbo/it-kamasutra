@@ -1,23 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
+import Header from "./Header.jsx";
+import { logout } from "../../redux/auth-reducer";
+import { connect } from "react-redux";
 
-import classes from "./Header.module.scss";
-import { NavLink } from "react-router-dom";
+class HeaderContainer extends Component {
+  render() {
+    return <Header {...this.props} />;
+  }
+}
 
-const Header = () => {
-  return (
-    <header className={classes.header}>
-      <div className={classes["logo-w"]}>
-        <img
-          src="https://i2.wp.com/banjos.com.au/wp-content/uploads/2016/05/instagram-Logo-PNG-Transparent-Background-download.png"
-          alt="logo"
-          className={classes.logo}
-        />
-      </div>
-      <div className={classes["login-block"]}>
-        <NavLink to={"/login"}>Login</NavLink>
-      </div>
-    </header>
-  );
-};
+const mapStateToProps = state => ({
+  isAuth: state.auth.isAuth,
+  login: state.auth.login
+});
 
-export default Header;
+export default connect(mapStateToProps, { logout })(HeaderContainer);

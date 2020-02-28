@@ -11,3 +11,24 @@
 .description-block {
   padding: 20px;
 }
+
+.status-block {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  margin: 10px 0 0;
+}
+
+.photo-w {
+  overflow: hidden;
+  max-width: 120px;
+  border-radius: 50%;
+}
+
+.photo-i {
+  max-width: 100%;
+}
+
+.contact {
+  padding: 0 0 0 10px;
+}
